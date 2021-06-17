@@ -1,11 +1,12 @@
 // Firebase Config Begins =========
 var firebaseConfig = {
-    apiKey: "AIzaSyBo3PHArmbyLtaWRYSCNaN22W6HwaGbTy8",
-    authDomain: "jiho-bcb72.firebaseapp.com",
-    projectId: "jiho-bcb72",
-    storageBucket: "jiho-bcb72.appspot.com",
-    messagingSenderId: "757824469757",
-    appId: "1:757824469757:web:f73d7098784c278e371c94"
+  apiKey: "AIzaSyBJINHWpNWKCDCi1jYbBA0bCSexlOdlwCM",
+  authDomain: "website-comments-35d41.firebaseapp.com",
+  projectId: "website-comments-35d41",
+  storageBucket: "website-comments-35d41.appspot.com",
+  messagingSenderId: "150093268460",
+  appId: "1:150093268460:web:0c53e061ac371513b96cc9",
+  measurementId: "G-ZHP9W8T6EZ"
   };
   firebase.initializeApp(firebaseConfig);
   db = firebase.firestore();
