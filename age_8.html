@@ -50,6 +50,19 @@
     <p>Thanks!</p>
     <p>BBBBBBBYYYYYYYEEEE!</p>
     <script>
+        Enablebutton= document.getElementById("darkmode")
+        Enablebutton.onclick = function() {
+            if(Enablebutton.innerText === "Enable Dark mode") {
+                document.getElementById("box").style.backgroundColor="#333"
+                Enablebutton.innerText = "Go back to Light mode"
+            }
+            else {
+                document.getElementById("box").style.backgroundColor="rgb(28, 218, 85)"
+                Enablebutton.innerText = "Enable Dark mode"
+            }
+        }
+    </script>
+    <script>
         alert("Website popup. Welcome!")
     </script>
 </body>
