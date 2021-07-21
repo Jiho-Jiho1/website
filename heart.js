@@ -1,5 +1,5 @@
 db.collection("hearts").doc("hearts").onSnapshot((doc) => {
-    document.getElementById("heartss").innerText=doc.data().hearts
+    document.getElementById("num").innerText=doc.data().hearts
   })
 
   document.getElementById("hearts").onclick=function(){
