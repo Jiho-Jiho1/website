@@ -4,7 +4,7 @@ document.getElementById("fun").onclick= function(){
     if (num===0){
         window.location.href="https://funactivatedbutcrashed.com"
     }
-    if (num===0){
+    if (num===1){
         window.location.href="http://weavesilk.com/"
     }
 
