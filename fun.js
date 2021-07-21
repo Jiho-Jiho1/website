@@ -1,5 +1,5 @@
 document.getElementById("fun").onclick= function(){
-    const num = Math.floor(Math.random() * 7);
+    const num = Math.floor(Math.random() * 8);
     console.log(num)
     if (num===0){
         window.location.replace("https://funactivatedbutcrashed.com")
@@ -21,6 +21,9 @@ document.getElementById("fun").onclick= function(){
     }
     if (num===6){
         window.location.replace("https://www.WEBSITECRASHEDagain.com")
+    }
+    if (num===7){
+        window.location.replace("https://www.github.com")
     }
 
     
