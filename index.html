@@ -21,6 +21,13 @@
             background-color:black;
             color:ghostwhite;
         }
+        #like{
+            width: 40px;
+            height: 40px;
+        }
+        #num{
+            font-size: 35px;
+        }
     </style>
 </head>
 <body id="box">
@@ -29,6 +36,9 @@
     <audio src="/website/c_dance.mp3" controls autostart loop ></audio>
     <p>Welcome to my website, and you can show anybody this website!</p>
     <button id="darkmode">Enable Dark mode</button>
+    <br/>
+    <button><img id= "like"src="/website/thumbs_up.png" alt="Image not found"></button>
+    <span id= "num">0</span>
     <div>This is my Github page, please check it out!</div>
     <div><a href="https://github.com/Jiho-Jiho1">https://github.com/Jiho-Jiho1"></a></div>
     <p>My name is Jiho. As you may see, I'm still working on the website. I 'm trying to get some ideas. Please comment here!</p>
@@ -36,7 +46,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
     <script src="/website/commenttt.js"></script>
-  
+    <script src="/website/like.js"></script>
     <p>If... Something fun happens... I can change even more things!</p>
 
     
@@ -52,7 +62,7 @@
 
    <p>Oh, and these are my photos.</p> 
 
-   <a><div>img src=""</div></a>
+  
 
 
 
