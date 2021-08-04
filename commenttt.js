@@ -29,25 +29,50 @@ var firebaseConfig = {
   
   
   
-  function renderSingleComment(author, content) {
+  function renderSingleComment(author, content, like, i) {
+
+    like_num = 0;
+    if(like !== undefined)
+      like_num = like
     return `
   <div style="display: flex; width: 100%; border-left: 5px #bbb solid; margin: 30px; padding-left: 10px; box-sizing: border-box">
     <div style="width: 150px; font-weight: bold;">${author}</div>
     <div style="color: #666; margin-left: 10px">${content}</div>
+    <div style="color: #666; margin-left: 10px">${like_num}</div>
+    <button id="like-comment-${i}">
+      <img src="/website/like.png" style="width: 40px; height: 40px;">
+    </button>
   </div>
   `
   }
   
   function renderComments(allComments) {
     let commentsDom = "";
-    allComments.forEach(c => {
-      commentsDom += renderSingleComment(c.author, c.content)
+    allComments.forEach((c, i) => {
+      commentsDom += renderSingleComment(c.author, c.content, c.like, i)
     })
     return commentsDom;
   }
   
   db.collection("comment").doc("comment").onSnapshot((doc) => {
     commentContainer.innerHTML = renderComments(doc.data().allComments);
+    doc.data().allComments.forEach((c, i) => {
+      document.getElementById(`like-comment-${i}`).onclick = () => {
+        let commentDoc = db.collection("comment").doc("comment");
+        commentDoc.update({
+          allComments: doc.data().allComments.map((c, idx) => {
+            if(i !== idx) return c;
+            if(c.like === undefined) {
+              c.like = 1
+            }
+            else {
+              c.like++;
+            }
+            return c;
+          })
+        })
+      }
+    })
     commentContainer.scrollTop = commentContainer.scrollHeight;
   })
   
@@ -59,7 +84,8 @@ var firebaseConfig = {
     commentDoc.update({
       allComments: firebase.firestore.FieldValue.arrayUnion({
         author: nameField.value,
-        content: contentField.value
+        content: contentField.value,
+        like: 0
       })
     });
     nameField.value = ""
