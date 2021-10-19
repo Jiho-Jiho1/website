@@ -54,62 +54,66 @@
 <body id="box">
     
     <h1>Hello! This is my first website!</h1>
+    <audio src="/website/c_dance.mp3" controls autostart loop ></audio>
+
+    <p>Welcome to my website, and you can show anybody this website!</p>
+    <a href="https://jiho-jiho1.github.io/website/picture_name_teller.html">Jiho's Picture Name Finder</a>
+    <button id="darkmode">Enable Dark mode</button>
+    <br/>
     <!DOCTYPE HTML>
 <html lang="ko">
 <head>
   <meta charset="utf-8">
   <title>회원 가입</title>
-  <link rel="stylesheet" href="css/register3.css">
+  <link rel="stylesheet" href="css/register2.css">
 </head>
 <body>
   <form id="signup">
     <fieldset>
-      <legend>로그인 정보</legend>
+      <legend>Login Information</legend>
       <ul>
         <li>
-          <label for="userid">아이디</label>
+          <label for="userid">ID</label>
           <input id="userid" name="userid" type="text" required autofocus>
         </li>
         <li>
-          <label for="pwd1">비밀번호</label>
+          <label for="pwd1">PW</label>
           <input id="pwd1" name="pwd1" type="password"  required>
         </li>
         <li>
-          <label for="pwd2">비밀번호 확인</label>
+          <label for="pwd2">PW Check</label>
           <input id="pwd2" name="pwd2" type="password" required>
         </li>  
         <li>
-          <label for="level">회원 등급</label>
+          <label for="level">Member Level</label>
           <input id="level" name="level" type="text" readonly value="준회원">
         </li>
       </ul>
     </fieldset>
     <fieldset>
-      <legend>개인 정보</legend>
+      <legend>Personal Information</legend>
       <ul>
         <li>
-          <label for="fullname">이름</label>
+          <label for="fullname">Name</label>
           <input id="fullname" name="fullname" type="text" placeholder="5자미만 공백없이" required>
         </li>
         <li>
-          <label for="email">메일 주소</label>
+          <label for="email">Gmail</label>
           <input id="email" name="email" type="email" placeholder="abcd@domain.com" required autocomplete="off">
         </li>
         <li>
-          <label for="tel">연락처</label>
+          <label for="tel">Phone Number</label>
           <input id="tel" name="tel" type="tel" autocomplete="off">
         </li>  
       </ul>
     </fieldset>
     <fieldset>
-      <button type="submit"> 제출 </button> 
+      <button type="submit"> Sumbit </button> 
     </fieldset>
   </form>
-    <audio src="/website/c_dance.mp3" controls autostart loop ></audio>
-    <p>Welcome to my website, and you can show anybody this website!</p>
-    <a href="https://jiho-jiho1.github.io/website/picture_name_teller.html">Jiho's Picture Name Finder</a>
-    <button id="darkmode">Enable Dark mode</button>
-    <br/>
+</body>
+</html>
+</br>
     <button><img id= "like"src="/website/thumbs_up.png" alt="Image not found"></button>
     <span id= "num">0</span>
     <br/>
@@ -141,10 +145,81 @@
    <div>Later on, I'll try to make this website better! Here's a link to my Naver blog.</div>
    <div><a href="https://blog.naver.com/jihoin78">"https://blog.naver.com/jihoin78"></a><div>
 
+   <p>Now, here are some other things.</p>
+
+  </br>
+  <h2>Please look here.</h2>
+    </br>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>Admin Online Time</h2>
+    <table>
+        <tr>
+            <th>Weekdays</th>
+            <td>5:50~6:30</td>
+        </tr>
+        <tr>
+            <th>Wednesday</th>
+            <td>6:45~7:05</td>
+        </tr>
+        <tr>
+            <th>Weekends+Days off</th>
+            <td>2:00~2:35</td>
+        </tr>
+    </table>
+  </br>
+    <h2>Current time</h2>
+  </br>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-size:2em;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		var now = new Date();
+		document.write("Time: " + now.toLocaleString()) ;	// 로컬 형식으로 표시하기
+	</script>
+</body>
+</html>
+</br>
+
    <p>I made this with my coding teacher. Pleeeeeeease Share this website!</p>
    <p>This is my second website's link, please check it out if you hadn't!</p>
    <div><a href="https://jiho-jiho1.github.io/website/page_two.html">"https://jiho-jiho1.github.io/website/page_two.html"</a><div>
+    <h2>Did you click the link above?</h2>
+    <label for="Question_1">Did you click the link?</label>
+    <input type="text" id="Question_1">
+    <button type="submit"> Sumbit </button>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="openPopup()">
+	<script>
+		var blocked = false;
+		function openPopup() {			
+			var newWin = window.open("notice.html", "pop", "width=500, height=400");
+			if (newWin == null) {
+				alert("Popup Blockers seems to be activated. Please disable them for this page.")
+			}
+			newWin.moveBy(100,100);			
+		}
+	</script>
 
     <p>Thanks!</p>
     <p>BBBBBBBYYYYYYYEEEE!</p>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+  <style>
+    #container{
+      width:500px;
+      margin:10px auto;
+      padding:20px;
+    }
+    #info {
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">    
+    <h1>DOM Learning</h1>
+    <a href="#" onclick="addContents(); this.onclick='';">Learn More</a>    
+    <div id="info"></div>
+  </div>
+  <script>
+    function addContents() {
+      var newP = document.createElement("p");
+      var txtNode = document.createTextNode("DOM is Document Object Model's short saying.");
+      newP.appendChild(txtNode);
+      
+      var newImg = document.createElement("img");
+      var srcNode = document.createAttribute("src");
+      var altNode = document.createAttribute("alt");
+      srcNode.value = "images/dom.jpg";
+      altNode.value = "DOM Tree Example";
+      newImg.setAttributeNode(srcNode);
+      newImg.setAttributeNode(altNode);
+
+      document.getElementById("info").appendChild(newP);
+      document.getElementById("info").appendChild(newImg);
+    }
+  </script>
+</body>
+</html>
